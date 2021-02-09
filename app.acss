@@ -1,0 +1,15 @@
+page {
+  flex: 1;
+  display: flex;
+  background: #f7f7f7;
+}
+
+.header {
+  text-indent: 30px;
+  font-size: 30px;
+  color: blue;
+}
+
+.page {
+  width: 100%;
+}

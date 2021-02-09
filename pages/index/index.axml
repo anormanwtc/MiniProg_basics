@@ -1,0 +1,17 @@
+<!-- <view>
+  this is a blank page
+</view> -->
+
+<view class="page">
+<view class="header">
+  {{header}}
+  <view class="welcome">
+    Welcome to the Basics
+  </view>
+</view>
+
+  <button size="default" type="primary" onTap="red">Redirect</button>
+    <button size="default" type="primary" onTap="nav">Navigate</button>
+  <view class="emptycyan">
+  </view>
+</view>
