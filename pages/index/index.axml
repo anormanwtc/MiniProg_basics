@@ -1,7 +1,7 @@
 <!-- <view>
   this is a blank page
 </view> -->
-<image mode="scaleToFill" src=""/>
+
 <view class="page">
 <view class="header">
   {{header}}
