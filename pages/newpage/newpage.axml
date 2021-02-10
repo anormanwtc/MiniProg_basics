@@ -1,3 +1,17 @@
 <view class="header">
-  New Page
+<view>
+  Stored: 
+  <!-- <view a:for="storage">
+    {{}}
+  </view> -->
+</view>
+<view>
+    location:{{storage.location}}
+</view>
+<view>
+    tab: {{storage.tab}}
+</view>
+<view>
+    text: {{storage.text}}
+</view>
 </view>

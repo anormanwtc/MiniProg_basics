@@ -2,27 +2,38 @@ Page({
 
   data: {
     header: '',
-    content: 'hi'
+    content: 'hi',
+    pagesLoaded: 0,
   },
   onLoad(query) {
     const content = 'get from SQL data or something'
     this.setData({content})
     this.setData({header: 'Index Page'});
-    // my.setStorage({
-    //   key: 'store',
-    //   data: {
-    //     location: 'devTool',
-    //     tab: 'storage',
-    //     text: 'hello',
-    //   }
-    // });
+
+
+    var app = getApp();
+    app.globalData.pagesLoaded++;
+    my.setStorage({
+      key: 'stored',
+      data: {
+        location: 'test',
+        tab: 'storage',
+        text: 'hello',
+      }
+    });
     // my.clearStorage();
+    // my.removeStorage({
+    //   key: 'stored'
+    // });
     console.info('This is when the page loads');
   },
   onReady() {
     console.log('the index page is now ready to be interacted with')
   },
   onShow() {
+    var app = getApp();
+    const v = app.globalData.pagesLoaded;
+    this.setData({pagesLoaded:v})
     console.log('Index is now showing')
   },
   onHide() {
@@ -32,7 +43,8 @@ Page({
     console.log('you\'ve closed the index page')
   },
   onTitleClick() {
-    console.log('you clicked my title')
+    let num = getApp().sayHi();
+    console.log('you clicked my title ' + num + ' times')
   },
   onReachBottom() {
     console.log('you\'ve scrolled all the way')

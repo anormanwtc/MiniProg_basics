@@ -1,7 +1,10 @@
 App({
+  globalData: {
+    pagesLoaded: 0,
+    titleclicks: 0
+  },
   onLaunch(options) {
-    // Page opens for the first time
-    console.info('App onLaunch');
+    console.info('App onLaunch with pagesLoaded ' + this.globalData.pagesLoaded);
   },
   onShow() {
     console.log('The mini app is now showing')
@@ -13,5 +16,9 @@ App({
   },
   onError() {
     console.log('Error');
+  },
+  sayHi() {
+    console.log('Hi');
+    return ++this.globalData.titleclicks;
   }
 });

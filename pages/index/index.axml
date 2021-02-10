@@ -1,12 +1,15 @@
 <!-- <view>
   this is a blank page
 </view> -->
-
+<image mode="scaleToFill" src=""/>
 <view class="page">
 <view class="header">
   {{header}}
   <view class="welcome">
     Welcome to the Basics
+  </view>
+  <view class="welcome">
+    Pages loaded: {{pagesLoaded}}
   </view>
 </view>
 
